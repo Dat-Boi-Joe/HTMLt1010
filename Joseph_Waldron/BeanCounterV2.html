@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>The Bean Counter</title>
+	<style type="text/css">
+		body{
+			background-color: saddlebrown; color: darkorange; font-family: helvetica; text-align: center;
+		}
+		hr{
+			width: 25%; color: darkorange ;
+		}
+		h1{
+			color: white;
+		}
+		section {
+			margin-left : auto; margin-right : auto; text-align : center;
+		}
+	</style>
+</head>
+<body>
+	<h1>The Bean Counter</h1>
+	<hr/>
+	<p><b>Figuring the price of espresso drinks<br/>
+	so baristas can have time to chat</b></p>
+	<br/>
+	<section style="display: table;">
+  		<div style="display: table-row;">
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+  		</div>
+  		<div style="display: table-row;">
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+  		</div>
+  		<div style="display: table-row;">
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+  		</div>
+  		<div style="display: table-row;">
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+    		<div style="display: table-cell;"><button></button></div>
+  		</div>
+	</section>
+
+
+	<script>
+		var drink = "latte";
+		var ounce = 12;
+		var shots = 2;
+		var taxRate = 0.088;
+		var price;
+			if (drink == "espresso")
+				price = 1.40;
+			if (drink == "latte"||drink == "cappuccino"){
+				if (ounce == 8)
+					price = 1.95;
+				if (ounce == 12)
+					price = 2.35;
+				if (ounce == 16)
+					price = 2.75;
+			}
+			if (drink == "americano")
+				price = 1.20 + 0.30*(ounce/8);
+			price = price + (shots - 1)*.50;
+			price = price + price*taxRate;
+			alert(price)
+	</script>
+</body>
+</html>
